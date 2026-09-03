@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "description": "爬虫定时任务配置",
+  "lastUpdate": "2026-09-04",
+  "schedules": [
+    {
+      "name": "澳门开奖后更新",
+      "region": "macao",
+      "trigger": "after_draw",
+      "description": "澳门每天开奖，开奖后1小时检查更新",
+      "cronExpression": "0 22 * * *",
+      "timezone": "Asia/Macau",
+      "note": "澳门开奖时间约21:30，22:00开始爬取"
+    },
+    {
+      "name": "香港开奖后更新",
+      "region": "hongkong",
+      "trigger": "after_draw",
+      "description": "香港二四六开奖，开奖后1小时检查更新",
+      "cronExpression": "0 22 * * 2,4,6",
+      "timezone": "Asia/Hong_Kong",
+      "note": "香港开奖时间约21:30，22:00开始爬取，仅周二四六"
+    },
+    {
+      "name": "凌晨3点全量检查",
+      "region": "all",
+      "trigger": "scheduled",
+      "description": "每天凌晨3点检查所有资料更新",
+      "cronExpression": "0 3 * * *",
+      "timezone": "Asia/Shanghai",
+      "note": "用户最少时段，全量检查"
+    },
+    {
+      "name": "下午3点增量检查",
+      "region": "all",
+      "trigger": "scheduled",
+      "description": "每天下午3点快速检查最新期",
+      "cronExpression": "0 15 * * *",
+      "timezone": "Asia/Shanghai",
+      "note": "快速检查，避免遗漏"
+    }
+  ],
+  "crawlerConfig": {
+    "macao": {
+      "drawFrequency": "daily",
+      "expectedDrawTime": "21:30",
+      "materialsCount": 100,
+      "sourceUrls": {
+        "primary": "https://49.gs.cn",
+        "backup": []
+      }
+    },
+    "hongkong": {
+      "drawFrequency": "every_2_days",
+      "drawDays": [2, 4, 6],
+      "expectedDrawTime": "21:30",
+      "materialsCount": 100,
+      "sourceUrls": {
+        "primary": "https://49.gs.cn",
+        "backup": []
+      }
+    },
+    "taiwan": {
+      "enabled": false,
+      "reserved": true,
+      "note": "预留位置，暂未实施"
+    }
+  },
+  "performance": {
+    "maxConcurrent": 5,
+    "retryAttempts": 3,
+    "timeout": 30000,
+    "delayBetweenRequests": 1000
+  }
+}

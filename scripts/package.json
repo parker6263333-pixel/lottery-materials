@@ -1,0 +1,16 @@
+{
+  "name": "wz-materials-manager",
+  "version": "1.0.0",
+  "description": "资料库管理工具",
+  "main": "update-materials.js",
+  "scripts": {
+    "add": "node update-materials.js add",
+    "batch": "node update-materials.js batch",
+    "create": "node update-materials.js create",
+    "delete": "node update-materials.js delete",
+    "stats": "node update-materials.js stats"
+  },
+  "keywords": ["materials", "lottery", "management"],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,122 @@
+{
+  "materials": [
+    {
+      "id": "paogoutu",
+      "name": "跑狗图",
+      "category": "hot",
+      "type": "image",
+      "source": {
+        "url": "https://49.gs.cn/paogoutu/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "guanjiap",
+      "name": "管家婆",
+      "category": "hot",
+      "type": "image",
+      "source": {
+        "url": "https://49.gs.cn/guanjiap/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "lingbowei",
+      "name": "凌波微步",
+      "category": "hot",
+      "type": "image",
+      "source": {
+        "url": "https://49.gs.cn/lingbowei/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "yunchuguanren",
+      "name": "云楚官人",
+      "category": "hot",
+      "type": "image",
+      "source": {
+        "url": "https://49.gs.cn/yunchuguanren/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "jinzhun24ma",
+      "name": "精准24码",
+      "category": "hot",
+      "type": "mixed",
+      "source": {
+        "url": "https://49.gs.cn/jinzhun24ma/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "numbersSelector": ".numbers-list",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "liuhekaima",
+      "name": "六合开马",
+      "category": "medium",
+      "type": "image",
+      "source": {
+        "url": "https://49.gs.cn/liuhekaima/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "imageSelector": "img.main-image",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    },
+    {
+      "id": "shuerxiao",
+      "name": "杀二肖三码",
+      "category": "medium",
+      "type": "numbers",
+      "source": {
+        "url": "https://49.gs.cn/shuerxiao/",
+        "selector": ".material-item",
+        "periodPattern": "(\\d{3})期",
+        "numbersSelector": ".kill-numbers",
+        "dateSelector": ".date"
+      },
+      "enabled": true
+    }
+  ],
+  "crawlSettings": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "retryDelay": 2000,
+    "concurrentRequests": 3,
+    "respectRobotsTxt": true,
+    "rateLimit": {
+      "requestsPerMinute": 30,
+      "delayBetweenRequests": 2000
+    }
+  },
+  "imageProcessing": {
+    "maxWidth": 1200,
+    "quality": 85,
+    "format": "jpeg",
+    "optimize": true,
+    "targetSize": 50
+  }
+}

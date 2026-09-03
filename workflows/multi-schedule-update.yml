@@ -1,0 +1,200 @@
+# 🤖 多时段自动更新系统
+# 支持：开奖后更新 + 凌晨3点 + 下午3点
+
+name: Multi-Schedule Auto Update
+
+on:
+  # 定时触发 - 凌晨3点（北京时间）
+  schedule:
+    - cron: '0 19 * * *'  # UTC 19:00 = 北京时间 03:00
+    - cron: '0 7 * * *'   # UTC 07:00 = 北京时间 15:00
+  
+  # 手动触发（可指定区域）
+  workflow_dispatch:
+    inputs:
+      region:
+        description: '指定更新区域'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - macao
+          - hongkong
+      force:
+        description: '强制更新所有资料'
+        required: false
+        default: false
+        type: boolean
+  
+  # 开奖后触发（通过外部webhook调用）
+  repository_dispatch:
+    types: [draw_complete]
+
+jobs:
+  # 检测当前应该更新哪个区域
+  detect-region:
+    runs-on: ubuntu-latest
+    outputs:
+      should_update_macao: ${{ steps.check.outputs.macao }}
+      should_update_hongkong: ${{ steps.check.outputs.hongkong }}
+      trigger_type: ${{ steps.check.outputs.trigger_type }}
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+      
+      - name: 🔍 检测更新区域
+        id: check
+        run: |
+          # 获取当前星期几（1=周一, 2=周二...）
+          DOW=$(date +%u)
+          HOUR=$(date +%H)
+          
+          echo "当前时间: $(date)"
+          echo "星期: $DOW"
+          echo "小时: $HOUR"
+          
+          # 澳门每天都更新
+          echo "macao=true" >> $GITHUB_OUTPUT
+          
+          # 香港只在周二(2)、周四(4)、周六(6)更新
+          if [[ "$DOW" == "2" || "$DOW" == "4" || "$DOW" == "6" ]]; then
+            echo "hongkong=true" >> $GITHUB_OUTPUT
+            echo "✅ 今天是香港开奖日"
+          else
+            echo "hongkong=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 今天不是香港开奖日，跳过香港更新"
+          fi
+          
+          # 判断触发类型
+          if [[ "${{ github.event_name }}" == "repository_dispatch" ]]; then
+            echo "trigger_type=after_draw" >> $GITHUB_OUTPUT
+          elif [[ "$HOUR" == "03" ]]; then
+            echo "trigger_type=morning" >> $GITHUB_OUTPUT
+          elif [[ "$HOUR" == "15" ]]; then
+            echo "trigger_type=afternoon" >> $GITHUB_OUTPUT
+          else
+            echo "trigger_type=manual" >> $GITHUB_OUTPUT
+          fi
+
+  # 更新澳门资料
+  update-macao:
+    needs: detect-region
+    if: needs.detect-region.outputs.should_update_macao == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+      
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: 📦 Install Dependencies
+        run: npm install
+      
+      - name: 🕷️ 爬取澳门资料
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          REGION: macao
+          TRIGGER_TYPE: ${{ needs.detect-region.outputs.trigger_type }}
+        run: |
+          echo "🎰 开始更新澳门资料..."
+          echo "触发类型: $TRIGGER_TYPE"
+          node scripts/cloudflare-crawler.js
+      
+      - name: ✅ 澳门更新完成
+        run: |
+          echo "✅ 澳门资料更新完成"
+          echo "⏱️ 完成时间: $(date)"
+
+  # 更新香港资料
+  update-hongkong:
+    needs: detect-region
+    if: needs.detect-region.outputs.should_update_hongkong == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+      
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: 📦 Install Dependencies
+        run: npm install
+      
+      - name: 🕷️ 爬取香港资料
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          REGION: hongkong
+          TRIGGER_TYPE: ${{ needs.detect-region.outputs.trigger_type }}
+        run: |
+          echo "🎰 开始更新香港资料..."
+          echo "触发类型: $TRIGGER_TYPE"
+          node scripts/cloudflare-crawler.js
+      
+      - name: ✅ 香港更新完成
+        run: |
+          echo "✅ 香港资料更新完成"
+          echo "⏱️ 完成时间: $(date)"
+
+  # 触发网站重新部署
+  deploy:
+    needs: [update-macao, update-hongkong]
+    if: always() && (needs.update-macao.result == 'success' || needs.update-hongkong.result == 'success')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🚀 触发Vercel部署
+        if: secrets.VERCEL_DEPLOY_HOOK != ''
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
+          echo "✅ Vercel部署已触发"
+      
+      - name: 🚀 触发Cloudflare Pages部署
+        if: secrets.CLOUDFLARE_DEPLOY_HOOK != ''
+        run: |
+          curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+          echo "✅ Cloudflare Pages部署已触发"
+      
+      - name: 📊 部署摘要
+        run: |
+          echo "## 🎉 自动更新完成" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- ⏰ 更新时间: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🎰 澳门状态: ${{ needs.update-macao.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 🎰 香港状态: ${{ needs.update-hongkong.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 🚀 部署状态: 已触发" >> $GITHUB_STEP_SUMMARY
+
+  # 失败通知
+  notify-failure:
+    needs: [update-macao, update-hongkong]
+    if: failure()
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: ❌ 发送失败通知
+        run: |
+          echo "❌ 自动更新失败"
+          echo "请检查日志排查问题"
+          # 这里可以添加邮件通知或其他通知方式

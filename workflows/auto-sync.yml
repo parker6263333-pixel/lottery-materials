@@ -1,0 +1,81 @@
+# GitHub Actions配置
+# 自动同步资料
+
+name: Auto Sync Materials
+
+on:
+  # 定时触发：每10分钟检查一次
+  schedule:
+    - cron: '*/10 * * * *'
+  
+  # 支持手动触发
+  workflow_dispatch:
+  
+  # 每次推送代码也触发一次（测试用）
+  push:
+    branches: [ main ]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 获取完整历史
+      
+      - name: 设置Node.js环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: 安装依赖
+        run: npm install
+      
+      - name: 创建必要目录
+        run: |
+          mkdir -p data/gallery/macao
+          mkdir -p data/gallery/hongkong
+          mkdir -p data/materials/macao
+          mkdir -p data/materials/hongkong
+      
+      - name: 执行同步任务
+        run: npm run sync-once
+        env:
+          NODE_ENV: production
+      
+      - name: 检查是否有变更
+        id: check_changes
+        run: |
+          if [[ -n $(git status -s) ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: 提交变更到仓库
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --global user.name 'Auto Sync Bot'
+          git config --global user.email 'bot@github.com'
+          git add data/ assets/images/gallery/
+          git commit -m "🤖 自动同步资料 - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+      
+      - name: 发送通知（可选）
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          echo "资料已更新！"
+          # TODO: 在这里添加通知逻辑（邮件/Webhook等）
+      
+      - name: 上传日志（出错时）
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: sync-logs
+          path: |
+            *.log
+            data/*.json
+          retention-days: 7

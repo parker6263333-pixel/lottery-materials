@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "lastUpdate": "2026-09-04",
+  "regions": {
+    "macao": {
+      "name": "澳门六合彩",
+      "enabled": true,
+      "drawSchedule": "daily",
+      "updateTimes": ["after_draw", "03:00", "15:00"],
+      "materialsCount": 108
+    },
+    "hongkong": {
+      "name": "香港六合彩", 
+      "enabled": true,
+      "drawSchedule": "every_2_days",
+      "drawDays": ["Tuesday", "Thursday", "Saturday"],
+      "updateTimes": ["after_draw", "03:00", "15:00"],
+      "materialsCount": 108
+    },
+    "taiwan": {
+      "name": "台湾六合彩",
+      "enabled": false,
+      "reserved": true,
+      "note": "预留位置，暂未实施",
+      "materialsCount": 0
+    }
+  },
+  "storage": {
+    "provider": "cloudflare_r2",
+    "imagePath": "materials/{region}/{materialId}/{year}/{period}.jpg",
+    "database": "cloudflare_d1"
+  },
+  "historyDepth": {
+    "year": 2026,
+    "keepAllPeriods": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "macao": [
+    {
+      "id": "paogoutu",
+      "name": "跑狗图",
+      "type": "image",
+      "category": "hot",
+      "selector": ".paogoutu-image",
+      "url": "https://49.gs.cn/paogoutu/",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "id": "guanjiap",
+      "name": "管家婆",
+      "type": "image",
+      "category": "hot",
+      "selector": ".guanjiap-image",
+      "url": "https://49.gs.cn/guanjiap/",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "id": "lingboweib",
+      "name": "凌波微步",
+      "type": "image",
+      "category": "hot",
+      "selector": ".lingboweib-image",
+      "url": "https://49.gs.cn/lingboweib/",
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "id": "yunchuguanren",
+      "name": "云楚官人",
+      "type": "image",
+      "category": "hot",
+      "selector": ".yunchuguanren-image",
+      "url": "https://49.gs.cn/yunchuguanren/",
+      "enabled": true,
+      "priority": 4
+    },
+    {
+      "id": "jingzhun24ma",
+      "name": "精准24码",
+      "type": "mixed",
+      "category": "numbers",
+      "selector": ".jingzhun24ma-data",
+      "url": "https://49.gs.cn/jingzhun24ma/",
+      "enabled": true,
+      "priority": 5
+    }
+  ],
+  "taiwan": [
+    {
+      "id": "tw-paogoutu",
+      "name": "台湾跑狗图",
+      "type": "image",
+      "category": "hot",
+      "manual": true,
+      "priority": 1
+    },
+    {
+      "id": "tw-guanjiap",
+      "name": "台湾管家婆",
+      "type": "image",
+      "category": "hot",
+      "manual": true,
+      "priority": 2
+    }
+  ]
+}

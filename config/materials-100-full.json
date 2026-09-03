@@ -1,0 +1,1265 @@
+{
+  "version": "2.0.0",
+  "description": "资料类型配置�?- 完整�?00+资料",
+  "lastUpdate": "2026-09-03",
+  "types": {
+    "yunchu-guanren": {
+      "code": "yunchu-guanren",
+      "name": "云楚官人",
+      "icon": "👨‍�?,
+      "color": "#4A90E2",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "云楚官人精准资料",
+      "templates": [
+        "五肖中特",
+        "开心生活二�?,
+        "官人公式",
+        "官人二尾",
+        "8000元两�?,
+        "公式二肖"
+      ],
+      "priority": 1,
+      "isHot": true
+    },
+    "zhenban-shepaitu": {
+      "code": "zhenban-shepaitu",
+      "name": "正版射牌�?,
+      "icon": "🎯",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "正版射牌图彩色图�?,
+      "priority": 2,
+      "isHot": true
+    },
+    "fuqi-qinzhun": {
+      "code": "fuqi-qinzhun",
+      "name": "富奇秦准",
+      "icon": "💰",
+      "color": "#F39C12",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "富奇秦准精准推荐",
+      "templates": [
+        "特码推荐",
+        "二肖中特",
+        "三码必中"
+      ],
+      "priority": 3,
+      "isHot": true
+    },
+    "zhougong-xuanjibao": {
+      "code": "zhougong-xuanjibao",
+      "name": "周公玄机�?,
+      "icon": "📜",
+      "color": "#9B59B6",
+      "dataType": "image",
+      "category": "macao",
+      "description": "周公玄机报彩色图�?,
+      "priority": 4,
+      "isHot": true
+    },
+    "zhuying-meihua": {
+      "code": "zhuying-meihua",
+      "name": "竹影梅花",
+      "icon": "🎋",
+      "color": "#27AE60",
+      "dataType": "image",
+      "category": "macao",
+      "description": "竹影梅花专解",
+      "priority": 5,
+      "isHot": true
+    },
+    "baixiaojie-mibao": {
+      "code": "baixiaojie-mibao",
+      "name": "白小姐密�?,
+      "icon": "👸",
+      "color": "#E91E63",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "白小姐密报精准资�?,
+      "templates": [
+        "特码密报",
+        "二肖推荐",
+        "玄机�?
+      ],
+      "priority": 6,
+      "isHot": true
+    },
+    "huangdi-mengliao": {
+      "code": "huangdi-mengliao",
+      "name": "皇帝猛料",
+      "icon": "👑",
+      "color": "#FFD700",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "皇帝猛料精准号码",
+      "priority": 7,
+      "isHot": true
+    },
+    "liuhe-jianbao": {
+      "code": "liuhe-jianbao",
+      "name": "六合简报图",
+      "icon": "📰",
+      "color": "#3498DB",
+      "dataType": "image",
+      "category": "macao",
+      "description": "六合简报图每期必看",
+      "priority": 8,
+      "isHot": false
+    },
+    "wangjiao-chuanzhen": {
+      "code": "wangjiao-chuanzhen",
+      "name": "旺角传真",
+      "icon": "📠",
+      "color": "#E67E22",
+      "dataType": "image",
+      "category": "macao",
+      "description": "旺角传真内幕资料",
+      "priority": 9,
+      "isHot": false
+    },
+    "aomen-yiyangfa": {
+      "code": "aomen-yiyangfa",
+      "name": "澳门一样发",
+      "icon": "🎰",
+      "color": "#1ABC9C",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门一样发中特资料",
+      "templates": [
+        "特码推荐",
+        "生肖推荐"
+      ],
+      "priority": 10,
+      "isHot": false
+    },
+    "ximen-qingliao": {
+      "code": "ximen-qingliao",
+      "name": "西门庆料",
+      "icon": "🎭",
+      "color": "#8E44AD",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "西门庆料精准推荐",
+      "priority": 11,
+      "isHot": false
+    },
+    "jinbao-longhubang": {
+      "code": "jinbao-longhubang",
+      "name": "劲爆龙虎�?,
+      "icon": "🐉",
+      "color": "#C0392B",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "劲爆龙虎榜高手排�?,
+      "priority": 12,
+      "isHot": false
+    },
+    "fuxing-jinpai": {
+      "code": "fuxing-jinpai",
+      "name": "福星金牌",
+      "icon": "🌟",
+      "color": "#F1C40F",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "福星金牌中特资料",
+      "templates": [
+        "金牌六肖",
+        "特码推荐"
+      ],
+      "priority": 13,
+      "isHot": false
+    },
+    "gaoshou-jietie": {
+      "code": "gaoshou-jietie",
+      "name": "高手解特",
+      "icon": "🎓",
+      "color": "#16A085",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "高手解特精准分析",
+      "priority": 14,
+      "isHot": false
+    },
+    "guibin-zhunliao": {
+      "code": "guibin-zhunliao",
+      "name": "贵宾准料",
+      "icon": "💎",
+      "color": "#2980B9",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "贵宾准料VIP资料",
+      "templates": [
+        "贵宾二肖",
+        "特码精�?
+      ],
+      "priority": 15,
+      "isHot": false
+    },
+    "wudi-zhugebao": {
+      "code": "wudi-zhugebao",
+      "name": "无敌猪哥�?,
+      "icon": "🐷",
+      "color": "#E84393",
+      "dataType": "image",
+      "category": "macao",
+      "description": "无敌猪哥报彩色图�?,
+      "priority": 16,
+      "isHot": false
+    },
+    "wangjiao-haoliao": {
+      "code": "wangjiao-haoliao",
+      "name": "旺角好料",
+      "icon": "🔥",
+      "color": "#D63031",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "旺角好料每期必中",
+      "priority": 17,
+      "isHot": false
+    },
+    "baixiaojie-jiushi": {
+      "code": "baixiaojie-jiushi",
+      "name": "白小姐救�?,
+      "icon": "👼",
+      "color": "#FD79A8",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "白小姐救世报资料",
+      "templates": [
+        "救世�?,
+        "特码推荐"
+      ],
+      "priority": 18,
+      "isHot": false
+    },
+    "facai-jingliao": {
+      "code": "facai-jingliao",
+      "name": "发财精料",
+      "icon": "💵",
+      "color": "#00B894",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "发财精料中特资料",
+      "priority": 19,
+      "isHot": false
+    },
+    "mahui-huoshaotu": {
+      "code": "mahui-huoshaotu",
+      "name": "马会火烧�?,
+      "icon": "🔥",
+      "color": "#FF7675",
+      "dataType": "image",
+      "category": "macao",
+      "description": "马会火烧图彩色图�?,
+      "priority": 20,
+      "isHot": false
+    },
+    "chuangfu-haoliao": {
+      "code": "chuangfu-haoliao",
+      "name": "创富好料",
+      "icon": "💼",
+      "color": "#6C5CE7",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "创富好料精准推荐",
+      "priority": 21,
+      "isHot": false
+    },
+    "bocai-pingtebao": {
+      "code": "bocai-pingtebao",
+      "name": "博彩平特�?,
+      "icon": "📊",
+      "color": "#A29BFE",
+      "dataType": "image",
+      "category": "macao",
+      "description": "博彩平特报图�?,
+      "priority": 22,
+      "isHot": false
+    },
+    "shuiguo-gaoshou": {
+      "code": "shuiguo-gaoshou",
+      "name": "水果高手",
+      "icon": "🍎",
+      "color": "#FD79A8",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "水果高手精准资料",
+      "templates": [
+        "水果特码",
+        "生肖推荐"
+      ],
+      "priority": 23,
+      "isHot": false
+    },
+    "liuhe-caishen": {
+      "code": "liuhe-caishen",
+      "name": "六合财神",
+      "icon": "💰",
+      "color": "#FDCB6E",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "六合财神精准号码",
+      "priority": 24,
+      "isHot": false
+    },
+    "sanguai-jinxiaotu": {
+      "code": "sanguai-jinxiaotu",
+      "name": "三怪禁肖图",
+      "icon": "👻",
+      "color": "#636E72",
+      "dataType": "kill",
+      "category": "macao",
+      "description": "三怪禁肖图杀肖资�?,
+      "priority": 25,
+      "isHot": false
+    },
+    "liuhe-huangliao": {
+      "code": "liuhe-huangliao",
+      "name": "六合皇料",
+      "icon": "🏆",
+      "color": "#FFEAA7",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "六合皇料精准推荐",
+      "priority": 26,
+      "isHot": false
+    },
+    "neimu-texiao-b": {
+      "code": "neimu-texiao-b",
+      "name": "内幕特肖B",
+      "icon": "🔐",
+      "color": "#2D3436",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "内幕特肖B版资�?,
+      "priority": 27,
+      "isHot": false
+    },
+    "18dian-lailiao": {
+      "code": "18dian-lailiao",
+      "name": "18点来�?,
+      "icon": "🕕",
+      "color": "#00B894",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "18点来料及时资�?,
+      "templates": [
+        "来料特码",
+        "生肖推荐"
+      ],
+      "priority": 28,
+      "isHot": false
+    },
+    "gongshi-guilu": {
+      "code": "gongshi-guilu",
+      "name": "公式规律",
+      "icon": "📐",
+      "color": "#0984E3",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "公式规律精准计算",
+      "priority": 29,
+      "isHot": false
+    },
+    "aomen-haocai": {
+      "code": "aomen-haocai",
+      "name": "澳门好彩",
+      "icon": "🎊",
+      "color": "#FF7675",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门好彩精准资料",
+      "templates": [
+        "特码推荐",
+        "二肖中特"
+      ],
+      "priority": 30,
+      "isHot": false
+    },
+    "aomen-qianpaitu": {
+      "code": "aomen-qianpaitu",
+      "name": "澳门签牌�?,
+      "icon": "🎴",
+      "color": "#FD79A8",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门签牌图彩色图�?,
+      "priority": 31,
+      "isHot": false
+    },
+    "liubowen-liao": {
+      "code": "liubowen-liao",
+      "name": "刘伯温料",
+      "icon": "🧙",
+      "color": "#6C5CE7",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "刘伯温料神算资料",
+      "templates": [
+        "神算特码",
+        "玄机�?
+      ],
+      "priority": 32,
+      "isHot": false
+    },
+    "tianxia-jingying": {
+      "code": "tianxia-jingying",
+      "name": "天下精英",
+      "icon": "�?,
+      "color": "#FDCB6E",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "天下精英高手资料",
+      "priority": 33,
+      "isHot": false
+    },
+    "jinming-shijia": {
+      "code": "jinming-shijia",
+      "name": "金明世家",
+      "icon": "🏰",
+      "color": "#F39C12",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "金明世家精准资料",
+      "templates": [
+        "世家特码",
+        "生肖推荐"
+      ],
+      "priority": 34,
+      "isHot": false
+    },
+    "tema-kuaidibao": {
+      "code": "tema-kuaidibao",
+      "name": "特码快递报",
+      "icon": "📮",
+      "color": "#E17055",
+      "dataType": "image",
+      "category": "macao",
+      "description": "特码快递报图纸",
+      "priority": 35,
+      "isHot": false
+    },
+    "caijuan-gongsi": {
+      "code": "caijuan-gongsi",
+      "name": "彩券公司",
+      "icon": "🏢",
+      "color": "#00B894",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "彩券公司精准资料",
+      "priority": 36,
+      "isHot": false
+    },
+    "tongtian-jiema": {
+      "code": "tongtian-jiema",
+      "name": "通天报解�?,
+      "icon": "🔓",
+      "color": "#0984E3",
+      "dataType": "image",
+      "category": "macao",
+      "description": "通天报解码图�?,
+      "priority": 37,
+      "isHot": false
+    },
+    "baiwan-fuweng": {
+      "code": "baiwan-fuweng",
+      "name": "百万富翁",
+      "icon": "🤵",
+      "color": "#FDCB6E",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "百万富翁精准资料",
+      "templates": [
+        "富翁特码",
+        "二肖推荐"
+      ],
+      "priority": 38,
+      "isHot": false
+    },
+    "aomen-dalubao": {
+      "code": "aomen-dalubao",
+      "name": "澳门大陆�?,
+      "icon": "🗞�?,
+      "color": "#74B9FF",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门大陆报图�?,
+      "priority": 39,
+      "isHot": false
+    },
+    "fenghuang-majing": {
+      "code": "fenghuang-majing",
+      "name": "凤凰马经",
+      "icon": "🦅",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "凤凰马经彩色图纸",
+      "priority": 40,
+      "isHot": false
+    },
+    "menger-shumabao": {
+      "code": "menger-shumabao",
+      "name": "梦儿数码�?,
+      "icon": "💤",
+      "color": "#A29BFE",
+      "dataType": "image",
+      "category": "macao",
+      "description": "梦儿数码报图�?,
+      "priority": 41,
+      "isHot": false
+    },
+    "zengdaoren-anyu": {
+      "code": "zengdaoren-anyu",
+      "name": "曾道人暗�?,
+      "icon": "🤐",
+      "color": "#636E72",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "曾道人暗语玄�?,
+      "templates": [
+        "暗语解码",
+        "特码推荐"
+      ],
+      "priority": 42,
+      "isHot": false
+    },
+    "tequ-tianshun": {
+      "code": "tequ-tianshun",
+      "name": "特区天顺",
+      "icon": "🎰",
+      "color": "#00CEC9",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "特区天顺精准资料",
+      "priority": 43,
+      "isHot": false
+    },
+    "30ma-zhongtetu": {
+      "code": "30ma-zhongtetu",
+      "name": "30码中特图",
+      "icon": "🎯",
+      "color": "#FF7675",
+      "dataType": "image",
+      "category": "macao",
+      "description": "30码中特图�?,
+      "priority": 44,
+      "isHot": false
+    },
+    "bofa-shijia": {
+      "code": "bofa-shijia",
+      "name": "博发世家",
+      "icon": "🏛�?,
+      "color": "#FFEAA7",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "博发世家精准资料",
+      "templates": [
+        "世家特码",
+        "生肖推荐"
+      ],
+      "priority": 45,
+      "isHot": false
+    },
+    "36ma-zhongtetu": {
+      "code": "36ma-zhongtetu",
+      "name": "36码中特图",
+      "icon": "🎲",
+      "color": "#74B9FF",
+      "dataType": "image",
+      "category": "macao",
+      "description": "36码中特图�?,
+      "priority": 46,
+      "isHot": false
+    },
+    "lanyueliang-liao": {
+      "code": "lanyueliang-liao",
+      "name": "蓝月亮料",
+      "icon": "🌙",
+      "color": "#0984E3",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "蓝月亮料精准推荐",
+      "priority": 47,
+      "isHot": false
+    },
+    "boxiao-yibozhong": {
+      "code": "boxiao-yibozhong",
+      "name": "波肖一波中",
+      "icon": "🌊",
+      "color": "#00B894",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "波肖一波中资料",
+      "templates": [
+        "波色推荐",
+        "生肖中特"
+      ],
+      "priority": 48,
+      "isHot": false
+    },
+    "shihu-quanwei": {
+      "code": "shihu-quanwei",
+      "name": "十虎权威",
+      "icon": "🐅",
+      "color": "#E17055",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "十虎权威精准资料",
+      "priority": 49,
+      "isHot": false
+    },
+    "neibu-mengliao": {
+      "code": "neibu-mengliao",
+      "name": "内部猛料",
+      "icon": "🔒",
+      "color": "#2D3436",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "内部猛料VIP资料",
+      "templates": [
+        "内部特码",
+        "二肖推荐"
+      ],
+      "priority": 50,
+      "isHot": false
+    },
+    "liuhe-yingxiongbao": {
+      "code": "liuhe-yingxiongbao",
+      "name": "六合英雄�?,
+      "icon": "🦸",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "六合英雄报图�?,
+      "priority": 51,
+      "isHot": false
+    },
+    "chuanzhen-neimu": {
+      "code": "chuanzhen-neimu",
+      "name": "传真内幕",
+      "icon": "📄",
+      "color": "#95A5A6",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "传真内幕精准资料",
+      "templates": [
+        "内幕特码",
+        "生肖推荐"
+      ],
+      "priority": 52,
+      "isHot": false
+    },
+    "renwofa-liao": {
+      "code": "renwofa-liao",
+      "name": "任我发料",
+      "icon": "💸",
+      "color": "#27AE60",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "任我发料精准推荐",
+      "priority": 53,
+      "isHot": false
+    },
+    "tengsuan-celuebao": {
+      "code": "tengsuan-celuebao",
+      "name": "腾算策略�?,
+      "icon": "📈",
+      "color": "#3498DB",
+      "dataType": "image",
+      "category": "macao",
+      "description": "腾算策略报图�?,
+      "priority": 54,
+      "isHot": false
+    },
+    "aomen-dusheng": {
+      "code": "aomen-dusheng",
+      "name": "澳门赌圣",
+      "icon": "🎲",
+      "color": "#E67E22",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门赌圣精准资料",
+      "templates": [
+        "赌圣特码",
+        "二肖中特"
+      ],
+      "priority": 55,
+      "isHot": false
+    },
+    "langnv-xiaketu": {
+      "code": "langnv-xiaketu",
+      "name": "狼女侠客�?,
+      "icon": "🐺",
+      "color": "#9B59B6",
+      "dataType": "image",
+      "category": "macao",
+      "description": "狼女侠客图彩色图�?,
+      "priority": 56,
+      "isHot": false
+    },
+    "aomen-guapai": {
+      "code": "aomen-guapai",
+      "name": "澳门挂牌",
+      "icon": "🏷�?,
+      "color": "#F39C12",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门挂牌精准资料",
+      "templates": [
+        "挂牌特码",
+        "生肖推荐"
+      ],
+      "priority": 57,
+      "isHot": false
+    },
+    "jingliao-dusheng": {
+      "code": "jingliao-dusheng",
+      "name": "精料赌圣",
+      "icon": "🎰",
+      "color": "#1ABC9C",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "精料赌圣精准推荐",
+      "priority": 58,
+      "isHot": false
+    },
+    "yuyue-longmenbao": {
+      "code": "yuyue-longmenbao",
+      "name": "鱼跃龙门�?,
+      "icon": "🐟",
+      "color": "#16A085",
+      "dataType": "image",
+      "category": "macao",
+      "description": "鱼跃龙门报图�?,
+      "priority": 59,
+      "isHot": false
+    },
+    "caipiao-xinshui": {
+      "code": "caipiao-xinshui",
+      "name": "彩票心水",
+      "icon": "💧",
+      "color": "#3498DB",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "彩票心水精准资料",
+      "templates": [
+        "心水特码",
+        "二肖推荐"
+      ],
+      "priority": 60,
+      "isHot": false
+    },
+    "xinshenghuo-youmo": {
+      "code": "xinshenghuo-youmo",
+      "name": "新生活幽�?,
+      "icon": "😄",
+      "color": "#FDCB6E",
+      "dataType": "image",
+      "category": "macao",
+      "description": "新生活幽默图�?,
+      "priority": 61,
+      "isHot": false
+    },
+    "zengshi-jituan": {
+      "code": "zengshi-jituan",
+      "name": "曾氏集团",
+      "icon": "🏢",
+      "color": "#2C3E50",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "曾氏集团精准资料",
+      "templates": [
+        "集团特码",
+        "生肖推荐"
+      ],
+      "priority": 62,
+      "isHot": false
+    },
+    "hongjie-neimut": {
+      "code": "hongjie-neimut",
+      "name": "红姐内幕�?,
+      "icon": "👩",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "红姐内幕图彩色图�?,
+      "priority": 63,
+      "isHot": false
+    },
+    "zengnvshi-liao": {
+      "code": "zengnvshi-liao",
+      "name": "曾女士料",
+      "icon": "👩‍�?,
+      "color": "#E91E63",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "曾女士料精准资料",
+      "templates": [
+        "女士特码",
+        "二肖中特"
+      ],
+      "priority": 64,
+      "isHot": false
+    },
+    "zhenban-tongtianbao": {
+      "code": "zhenban-tongtianbao",
+      "name": "正版通天�?,
+      "icon": "☁️",
+      "color": "#74B9FF",
+      "dataType": "image",
+      "category": "macao",
+      "description": "正版通天报图�?,
+      "priority": 65,
+      "isHot": false
+    },
+    "kantu-zhuamatu": {
+      "code": "kantu-zhuamatu",
+      "name": "看图抓码�?,
+      "icon": "🔍",
+      "color": "#636E72",
+      "dataType": "image",
+      "category": "macao",
+      "description": "看图抓码图彩色图�?,
+      "priority": 66,
+      "isHot": false
+    },
+    "caipiao-yingjia": {
+      "code": "caipiao-yingjia",
+      "name": "彩票赢家",
+      "icon": "🏆",
+      "color": "#FFEAA7",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "彩票赢家精准资料",
+      "templates": [
+        "赢家特码",
+        "生肖推荐"
+      ],
+      "priority": 67,
+      "isHot": false
+    },
+    "facai-bojubao": {
+      "code": "facai-bojubao",
+      "name": "发财波局�?,
+      "icon": "💰",
+      "color": "#00B894",
+      "dataType": "image",
+      "category": "macao",
+      "description": "发财波局报图�?,
+      "priority": 68,
+      "isHot": false
+    },
+    "huangdaxian-liao": {
+      "code": "huangdaxian-liao",
+      "name": "黄大仙料",
+      "icon": "🧙‍♂�?,
+      "color": "#FDCB6E",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "黄大仙料神仙资料",
+      "templates": [
+        "大仙特码",
+        "玄机�?
+      ],
+      "priority": 69,
+      "isHot": false
+    },
+    "qianshou-guanyintu": {
+      "code": "qianshou-guanyintu",
+      "name": "千手观音�?,
+      "icon": "🙏",
+      "color": "#F39C12",
+      "dataType": "image",
+      "category": "macao",
+      "description": "千手观音图彩色图�?,
+      "priority": 70,
+      "isHot": false
+    },
+    "shentong-toumabao": {
+      "code": "shentong-toumabao",
+      "name": "神童透码�?,
+      "icon": "👦",
+      "color": "#3498DB",
+      "dataType": "image",
+      "category": "macao",
+      "description": "神童透码报图�?,
+      "priority": 71,
+      "isHot": false
+    },
+    "fenghuang-bufengtu": {
+      "code": "fenghuang-bufengtu",
+      "name": "凤凰卜封�?,
+      "icon": "🦅",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "凤凰卜封图彩色图�?,
+      "priority": 72,
+      "isHot": false
+    },
+    "aomen-zhuamawang": {
+      "code": "aomen-zhuamawang",
+      "name": "澳门抓码�?,
+      "icon": "👑",
+      "color": "#9B59B6",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门抓码王精准资�?,
+      "templates": [
+        "抓码特码",
+        "生肖推荐"
+      ],
+      "priority": 73,
+      "isHot": false
+    },
+    "aomen-laorenbao": {
+      "code": "aomen-laorenbao",
+      "name": "澳门老人�?,
+      "icon": "👴",
+      "color": "#95A5A6",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门老人报图�?,
+      "priority": 74,
+      "isHot": false
+    },
+    "aomen-daluzai": {
+      "code": "aomen-daluzai",
+      "name": "澳门大陆�?,
+      "icon": "🧑",
+      "color": "#00CEC9",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门大陆仔精准资�?,
+      "templates": [
+        "大陆仔特�?,
+        "二肖推荐"
+      ],
+      "priority": 75,
+      "isHot": false
+    },
+    "aomen-niutoubao": {
+      "code": "aomen-niutoubao",
+      "name": "澳门牛头�?,
+      "icon": "🐮",
+      "color": "#E17055",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门牛头报图�?,
+      "priority": 76,
+      "isHot": false
+    },
+    "aomen-haitongbao": {
+      "code": "aomen-haitongbao",
+      "name": "澳门孩童�?,
+      "icon": "👶",
+      "color": "#FDCB6E",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门孩童报图�?,
+      "priority": 77,
+      "isHot": false
+    },
+    "boxiao-weimenbao": {
+      "code": "boxiao-weimenbao",
+      "name": "波肖尾门�?,
+      "icon": "🌊",
+      "color": "#0984E3",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "波肖尾门报精准资�?,
+      "templates": [
+        "波色推荐",
+        "尾数中特"
+      ],
+      "priority": 78,
+      "isHot": false
+    },
+    "shengxiao-shuxing": {
+      "code": "shengxiao-shuxing",
+      "name": "生肖属�?,
+      "icon": "🐉",
+      "color": "#E74C3C",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "生肖属性精准分�?,
+      "priority": 79,
+      "isHot": false
+    },
+    "liuhe-jiabao-a": {
+      "code": "liuhe-jiabao-a",
+      "name": "六合家宝A",
+      "icon": "🏠",
+      "color": "#F39C12",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "六合家宝A版资�?,
+      "templates": [
+        "家宝特码",
+        "生肖推荐"
+      ],
+      "priority": 80,
+      "isHot": false
+    },
+    "aomen-nanrenwei": {
+      "code": "aomen-nanrenwei",
+      "name": "澳门男人�?,
+      "icon": "🧔",
+      "color": "#2C3E50",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳门男人味精准资�?,
+      "templates": [
+        "男人味特�?,
+        "二肖中特"
+      ],
+      "priority": 81,
+      "isHot": false
+    },
+    "gaoshou-mengliao": {
+      "code": "gaoshou-mengliao",
+      "name": "高手猛料",
+      "icon": "💪",
+      "color": "#E17055",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "高手猛料精准推荐",
+      "priority": 82,
+      "isHot": false
+    },
+    "mahui-juesha": {
+      "code": "mahui-juesha",
+      "name": "马会绝杀",
+      "icon": "⚔️",
+      "color": "#2D3436",
+      "dataType": "kill",
+      "category": "macao",
+      "description": "马会绝杀杀码资�?,
+      "priority": 83,
+      "isHot": false
+    },
+    "pingxiao-pingma": {
+      "code": "pingxiao-pingma",
+      "name": "平肖平码",
+      "icon": "⚖️",
+      "color": "#00B894",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "平肖平码精准推荐",
+      "priority": 84,
+      "isHot": false
+    },
+    "baijie-zuizhun": {
+      "code": "baijie-zuizhun",
+      "name": "白姐最�?,
+      "icon": "👸",
+      "color": "#FD79A8",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "白姐最准精准资�?,
+      "templates": [
+        "白姐特码",
+        "二肖推荐"
+      ],
+      "priority": 85,
+      "isHot": false
+    },
+    "zengdao-yuanchuang": {
+      "code": "zengdao-yuanchuang",
+      "name": "曾道原创",
+      "icon": "✍️",
+      "color": "#636E72",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "曾道原创精准资料",
+      "templates": [
+        "原创特码",
+        "生肖推荐"
+      ],
+      "priority": 86,
+      "isHot": false
+    },
+    "saimahui-liao": {
+      "code": "saimahui-liao",
+      "name": "赛马会料",
+      "icon": "🏇",
+      "color": "#E67E22",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "赛马会料精准推荐",
+      "priority": 87,
+      "isHot": false
+    },
+    "pingte-yixiaotu": {
+      "code": "pingte-yixiaotu",
+      "name": "平特一肖图",
+      "icon": "🎯",
+      "color": "#3498DB",
+      "dataType": "image",
+      "category": "macao",
+      "description": "平特一肖图彩色图纸",
+      "priority": 88,
+      "isHot": false
+    },
+    "aomen-shedantu": {
+      "code": "aomen-shedantu",
+      "name": "澳门蛇蛋�?,
+      "icon": "🐍",
+      "color": "#27AE60",
+      "dataType": "image",
+      "category": "macao",
+      "description": "澳门蛇蛋图彩色图�?,
+      "priority": 89,
+      "isHot": false
+    },
+    "caibawang-liuxiao": {
+      "code": "caibawang-liuxiao",
+      "name": "彩霸王六�?,
+      "icon": "👑",
+      "color": "#9B59B6",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "彩霸王六肖精准资�?,
+      "templates": [
+        "霸王特码",
+        "六肖中特"
+      ],
+      "priority": 90,
+      "isHot": false
+    },
+    "yiju-zhenyant": {
+      "code": "yiju-zhenyant",
+      "name": "一句真言�?,
+      "icon": "💬",
+      "color": "#FDCB6E",
+      "dataType": "image",
+      "category": "macao",
+      "description": "一句真言图彩色图�?,
+      "priority": 91,
+      "isHot": false
+    },
+    "dongcheng-xijiu": {
+      "code": "dongcheng-xijiu",
+      "name": "东成西就�?,
+      "icon": "🧭",
+      "color": "#00B894",
+      "dataType": "image",
+      "category": "macao",
+      "description": "东成西就图彩色图�?,
+      "priority": 92,
+      "isHot": false
+    },
+    "aohua-zhongyouyi": {
+      "code": "aohua-zhongyouyi",
+      "name": "澳话中有�?,
+      "icon": "💭",
+      "color": "#0984E3",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "澳话中有意玄机资�?,
+      "templates": [
+        "话中有意",
+        "特码推荐"
+      ],
+      "priority": 93,
+      "isHot": false
+    },
+    "haomen-shengxiao": {
+      "code": "haomen-shengxiao",
+      "name": "豪门生肖",
+      "icon": "🏰",
+      "color": "#E17055",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "豪门生肖精准推荐",
+      "priority": 94,
+      "isHot": false
+    },
+    "tewei-baoliao": {
+      "code": "tewei-baoliao",
+      "name": "特围爆料",
+      "icon": "💥",
+      "color": "#E74C3C",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "特围爆料精准资料",
+      "templates": [
+        "特围推荐",
+        "生肖中特"
+      ],
+      "priority": 95,
+      "isHot": false
+    },
+    "jinpai-liuxiao": {
+      "code": "jinpai-liuxiao",
+      "name": "金牌六肖",
+      "icon": "🥇",
+      "color": "#FFD700",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "金牌六肖精准推荐",
+      "priority": 96,
+      "isHot": false
+    },
+    "teshu-feimaitu": {
+      "code": "teshu-feimaitu",
+      "name": "特殊飞马�?,
+      "icon": "🦄",
+      "color": "#A29BFE",
+      "dataType": "image",
+      "category": "macao",
+      "description": "特殊飞马图彩色图�?,
+      "priority": 97,
+      "isHot": false
+    },
+    "xuanji-yizitu": {
+      "code": "xuanji-yizitu",
+      "name": "玄机一字图",
+      "icon": "🔮",
+      "color": "#6C5CE7",
+      "dataType": "image",
+      "category": "macao",
+      "description": "玄机一字图彩色图纸",
+      "priority": 98,
+      "isHot": false
+    },
+    "jinji-bufa": {
+      "code": "jinji-bufa",
+      "name": "金鸡报发",
+      "icon": "🐓",
+      "color": "#FFEAA7",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "金鸡报发精准资料",
+      "templates": [
+        "金鸡特码",
+        "生肖推荐"
+      ],
+      "priority": 99,
+      "isHot": false
+    },
+    "jinguan-sanxiao": {
+      "code": "jinguan-sanxiao",
+      "name": "金冠三肖",
+      "icon": "👑",
+      "color": "#FFD700",
+      "dataType": "numbers",
+      "category": "macao",
+      "description": "金冠三肖精准推荐",
+      "priority": 100,
+      "isHot": false
+    }
+  },
+  "stats": {
+    "totalTypes": 100,
+    "hotTypes": 7,
+    "imageTypes": 35,
+    "numberTypes": 30,
+    "mixedTypes": 33,
+    "killTypes": 2
+  }
+}

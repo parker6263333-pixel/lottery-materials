@@ -1,0 +1,85 @@
+name: 每日自动更新资料
+
+# 触发条件
+on:
+  schedule:
+    # 每天凌晨0点（UTC时间16:00，北京时间00:00）
+    - cron: '0 16 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 检出代码
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 2. 设置Node.js
+      - name: 🔧 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      # 3. 安装依赖
+      - name: 📦 安装依赖
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          fi
+      
+      # 4. 运行自动更新脚本
+      - name: 🤖 自动更新到新期号
+        run: |
+          echo "开始更新资料..."
+          node scripts/auto-update-period.js
+          echo "更新完成！"
+      
+      # 5. 检查是否有变更
+      - name: 🔍 检查变更
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ 检测到文件变更"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 没有文件变更"
+          fi
+      
+      # 6. 配置Git
+      - name: ⚙️ 配置Git
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+      
+      # 7. 提交变更
+      - name: 💾 提交变更
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          TODAY=$(date '+%Y-%m-%d')
+          git add .
+          git commit -m "🤖 自动更新资料到最新期号 - $TODAY"
+          echo "✅ 变更已提交"
+      
+      # 8. 推送到仓库
+      - name: 📤 推送到仓库
+        if: steps.check.outputs.has_changes == 'true'
+        run: |
+          git push
+          echo "✅ 已推送到远程仓库"
+      
+      # 9. 输出结果
+      - name: 📊 输出结果
+        run: |
+          if [ "${{ steps.check.outputs.has_changes }}" == "true" ]; then
+            echo "✨ 资料更新成功！"
+            echo "📅 更新日期: $(date '+%Y-%m-%d %H:%M:%S')"
+            echo "🔄 网站将自动部署"
+          else
+            echo "ℹ️ 今日无需更新"
+          fi

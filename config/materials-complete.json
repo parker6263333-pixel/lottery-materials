@@ -1,0 +1,1103 @@
+{
+  "version": "1.0.0",
+  "lastUpdate": "2026-09-04",
+  "description": "完整的六合彩资料库配置 - 100+资料",
+  
+  "regions": {
+    "macao": {
+      "name": "澳门六合彩",
+      "enabled": true,
+      "schedule": {
+        "frequency": "daily",
+        "openTime": "21:30",
+        "updateTimes": ["after_draw", "03:00", "15:00"]
+      }
+    },
+    "hongkong": {
+      "name": "香港六合彩", 
+      "enabled": true,
+      "schedule": {
+        "frequency": "every_2_days",
+        "openDays": [2, 4, 6],
+        "openTime": "21:30",
+        "updateTimes": ["after_draw", "03:00", "15:00"]
+      }
+    },
+    "taiwan": {
+      "name": "台湾六合彩",
+      "enabled": false,
+      "reserved": true,
+      "note": "预留位置，暂未实施",
+      "schedule": {
+        "frequency": "manual",
+        "updateTimes": []
+      }
+    }
+  },
+  
+  "materials": {
+    "macao": [
+      {
+        "id": "paogoutu",
+        "name": "跑狗图",
+        "category": "hot",
+        "type": "image",
+        "priority": 1,
+        "source": {
+          "url": "https://49.gs.cn/amlhc/paogoutu/",
+          "fallback": ["https://49tuku.com/am/pgt/"]
+        },
+        "enabled": true
+      },
+      {
+        "id": "guanjiap",
+        "name": "管家婆",
+        "category": "hot",
+        "type": "image",
+        "priority": 2,
+        "source": {
+          "url": "https://49.gs.cn/amlhc/guanjiap/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "lingboweibo",
+        "name": "凌波微步",
+        "category": "hot",
+        "type": "image",
+        "priority": 3,
+        "source": {
+          "url": "https://49.gs.cn/amlhc/lingboweibo/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "yunchuguanren",
+        "name": "云楚官人",
+        "category": "hot",
+        "type": "image",
+        "priority": 4,
+        "source": {
+          "url": "https://49.gs.cn/amlhc/yunchuguanren/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "jingzhun24ma",
+        "name": "精准24码",
+        "category": "hot",
+        "type": "mixed",
+        "priority": 5,
+        "source": {
+          "url": "https://49.gs.cn/amlhc/jingzhun24ma/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "liuhekaima",
+        "name": "六合开马",
+        "category": "medium",
+        "type": "image",
+        "priority": 6,
+        "enabled": true
+      },
+      {
+        "id": "shuerxiao",
+        "name": "杀二肖三码",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 7,
+        "enabled": true
+      },
+      {
+        "id": "neimuxiaoxiyi",
+        "name": "内幕消息一",
+        "category": "medium",
+        "type": "image",
+        "priority": 8,
+        "enabled": true
+      },
+      {
+        "id": "neimuxiaoxier",
+        "name": "内幕消息二",
+        "category": "medium",
+        "type": "image",
+        "priority": 9,
+        "enabled": true
+      },
+      {
+        "id": "jinpaitejian",
+        "name": "金牌特荐",
+        "category": "medium",
+        "type": "mixed",
+        "priority": 10,
+        "enabled": true
+      },
+      {
+        "id": "zixiaomanshu",
+        "name": "紫肖满书",
+        "category": "medium",
+        "type": "image",
+        "priority": 11,
+        "enabled": true
+      },
+      {
+        "id": "yibozhongte",
+        "name": "一波中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 12,
+        "enabled": true
+      },
+      {
+        "id": "liangbozhongte",
+        "name": "两波中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 13,
+        "enabled": true
+      },
+      {
+        "id": "sanbozhongte",
+        "name": "三波中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 14,
+        "enabled": true
+      },
+      {
+        "id": "yixiaozhongte",
+        "name": "一肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 15,
+        "enabled": true
+      },
+      {
+        "id": "erxiaozhongte",
+        "name": "二肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 16,
+        "enabled": true
+      },
+      {
+        "id": "sanxiaozhongte",
+        "name": "三肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 17,
+        "enabled": true
+      },
+      {
+        "id": "sixiaozhongte",
+        "name": "四肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 18,
+        "enabled": true
+      },
+      {
+        "id": "wuxiaozhongte",
+        "name": "五肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 19,
+        "enabled": true
+      },
+      {
+        "id": "liuxiaozhongte",
+        "name": "六肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 20,
+        "enabled": true
+      },
+      {
+        "id": "qixiaozhongte",
+        "name": "七肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 21,
+        "enabled": true
+      },
+      {
+        "id": "baxiaozhongte",
+        "name": "八肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 22,
+        "enabled": true
+      },
+      {
+        "id": "jiuxiaozhongte",
+        "name": "九肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 23,
+        "enabled": true
+      },
+      {
+        "id": "shixiaozhongte",
+        "name": "十肖中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 24,
+        "enabled": true
+      },
+      {
+        "id": "liangmazhongte",
+        "name": "两码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 25,
+        "enabled": true
+      },
+      {
+        "id": "sanmazhongte",
+        "name": "三码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 26,
+        "enabled": true
+      },
+      {
+        "id": "simazhongte",
+        "name": "四码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 27,
+        "enabled": true
+      },
+      {
+        "id": "wumazhongte",
+        "name": "五码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 28,
+        "enabled": true
+      },
+      {
+        "id": "liumazhongte",
+        "name": "六码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 29,
+        "enabled": true
+      },
+      {
+        "id": "qimazhongte",
+        "name": "七码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 30,
+        "enabled": true
+      },
+      {
+        "id": "bamazhongte",
+        "name": "八码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 31,
+        "enabled": true
+      },
+      {
+        "id": "jiumazhongte",
+        "name": "九码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 32,
+        "enabled": true
+      },
+      {
+        "id": "shimazhongte",
+        "name": "十码中特",
+        "category": "medium",
+        "type": "numbers",
+        "priority": 33,
+        "enabled": true
+      },
+      {
+        "id": "pingmazhongte",
+        "name": "平码中特",
+        "category": "low",
+        "type": "numbers",
+        "priority": 34,
+        "enabled": true
+      },
+      {
+        "id": "pingsanzhongte",
+        "name": "平三中特",
+        "category": "low",
+        "type": "numbers",
+        "priority": 35,
+        "enabled": true
+      },
+      {
+        "id": "weishubilu",
+        "name": "尾数必录",
+        "category": "low",
+        "type": "numbers",
+        "priority": 36,
+        "enabled": true
+      },
+      {
+        "id": "teshuhaoma",
+        "name": "特殊号码",
+        "category": "low",
+        "type": "numbers",
+        "priority": 37,
+        "enabled": true
+      },
+      {
+        "id": "danshuangzhongte",
+        "name": "单双中特",
+        "category": "low",
+        "type": "numbers",
+        "priority": 38,
+        "enabled": true
+      },
+      {
+        "id": "dashengxiao",
+        "name": "大生肖",
+        "category": "low",
+        "type": "numbers",
+        "priority": 39,
+        "enabled": true
+      },
+      {
+        "id": "xiaoshengxiao",
+        "name": "小生肖",
+        "category": "low",
+        "type": "numbers",
+        "priority": 40,
+        "enabled": true
+      },
+      {
+        "id": "jiawu",
+        "name": "家禽野兽",
+        "category": "low",
+        "type": "numbers",
+        "priority": 41,
+        "enabled": true
+      },
+      {
+        "id": "hongbolanse",
+        "name": "红波蓝色",
+        "category": "low",
+        "type": "numbers",
+        "priority": 42,
+        "enabled": true
+      },
+      {
+        "id": "heshuzouxi",
+        "name": "合数走势",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 43,
+        "enabled": true
+      },
+      {
+        "id": "teshuzoushi",
+        "name": "特肖走势",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 44,
+        "enabled": true
+      },
+      {
+        "id": "temazoushi",
+        "name": "特码走势",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 45,
+        "enabled": true
+      },
+      {
+        "id": "lianghaotuijian",
+        "name": "两号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 46,
+        "enabled": true
+      },
+      {
+        "id": "sihaotuijian",
+        "name": "四号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 47,
+        "enabled": true
+      },
+      {
+        "id": "liuhaotuijian",
+        "name": "六号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 48,
+        "enabled": true
+      },
+      {
+        "id": "bahaotuijian",
+        "name": "八号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 49,
+        "enabled": true
+      },
+      {
+        "id": "shierhaotj",
+        "name": "十二号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 50,
+        "enabled": true
+      },
+      {
+        "id": "shiliuhaotj",
+        "name": "十六号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 51,
+        "enabled": true
+      },
+      {
+        "id": "ershihaotj",
+        "name": "二十号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 52,
+        "enabled": true
+      },
+      {
+        "id": "sanshihaotj",
+        "name": "三十号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 53,
+        "enabled": true
+      },
+      {
+        "id": "sishihaotj",
+        "name": "四十号推荐",
+        "category": "low",
+        "type": "numbers",
+        "priority": 54,
+        "enabled": true
+      },
+      {
+        "id": "tiancaixiaozi",
+        "name": "天才肖子",
+        "category": "medium",
+        "type": "image",
+        "priority": 55,
+        "enabled": true
+      },
+      {
+        "id": "zhencailvshi",
+        "name": "真材律师",
+        "category": "medium",
+        "type": "image",
+        "priority": 56,
+        "enabled": true
+      },
+      {
+        "id": "shenmicaizi",
+        "name": "神秘才子",
+        "category": "medium",
+        "type": "image",
+        "priority": 57,
+        "enabled": true
+      },
+      {
+        "id": "xianggangnvren",
+        "name": "香港女人",
+        "category": "medium",
+        "type": "image",
+        "priority": 58,
+        "enabled": true
+      },
+      {
+        "id": "guimizhushou",
+        "name": "鬼迷助手",
+        "category": "medium",
+        "type": "image",
+        "priority": 59,
+        "enabled": true
+      },
+      {
+        "id": "xiaozhusiduan",
+        "name": "小诸私段",
+        "category": "low",
+        "type": "image",
+        "priority": 60,
+        "enabled": true
+      },
+      {
+        "id": "chixinguaiseng",
+        "name": "痴心怪僧",
+        "category": "low",
+        "type": "image",
+        "priority": 61,
+        "enabled": true
+      },
+      {
+        "id": "manliuxiansheng",
+        "name": "慢六先生",
+        "category": "low",
+        "type": "image",
+        "priority": 62,
+        "enabled": true
+      },
+      {
+        "id": "sancaitongzi",
+        "name": "三才童子",
+        "category": "low",
+        "type": "image",
+        "priority": 63,
+        "enabled": true
+      },
+      {
+        "id": "shangguanlaoren",
+        "name": "上官老人",
+        "category": "low",
+        "type": "image",
+        "priority": 64,
+        "enabled": true
+      },
+      {
+        "id": "jinzhongxiansheng",
+        "name": "金钟先生",
+        "category": "low",
+        "type": "image",
+        "priority": 65,
+        "enabled": true
+      },
+      {
+        "id": "caishenyeye",
+        "name": "财神爷爷",
+        "category": "medium",
+        "type": "image",
+        "priority": 66,
+        "enabled": true
+      },
+      {
+        "id": "huangshanghuang",
+        "name": "皇上皇",
+        "category": "medium",
+        "type": "image",
+        "priority": 67,
+        "enabled": true
+      },
+      {
+        "id": "sanbuzhongte",
+        "name": "三步中特",
+        "category": "low",
+        "type": "image",
+        "priority": 68,
+        "enabled": true
+      },
+      {
+        "id": "bubuweisheng",
+        "name": "步步为胜",
+        "category": "low",
+        "type": "image",
+        "priority": 69,
+        "enabled": true
+      },
+      {
+        "id": "liangzufeiqin",
+        "name": "两组飞禽",
+        "category": "low",
+        "type": "numbers",
+        "priority": 70,
+        "enabled": true
+      },
+      {
+        "id": "yizumingong",
+        "name": "一组民工",
+        "category": "low",
+        "type": "numbers",
+        "priority": 71,
+        "enabled": true
+      },
+      {
+        "id": "cuozongfuza",
+        "name": "错综复杂",
+        "category": "low",
+        "type": "image",
+        "priority": 72,
+        "enabled": true
+      },
+      {
+        "id": "xinhuangmei",
+        "name": "新黄梅",
+        "category": "low",
+        "type": "image",
+        "priority": 73,
+        "enabled": true
+      },
+      {
+        "id": "zhengjiuniang",
+        "name": "正酒娘",
+        "category": "low",
+        "type": "image",
+        "priority": 74,
+        "enabled": true
+      },
+      {
+        "id": "xiangguangren",
+        "name": "想港人",
+        "category": "low",
+        "type": "image",
+        "priority": 75,
+        "enabled": true
+      },
+      {
+        "id": "tuijianxinshui",
+        "name": "推荐新水",
+        "category": "low",
+        "type": "numbers",
+        "priority": 76,
+        "enabled": true
+      },
+      {
+        "id": "neimuxiaoxisan",
+        "name": "内幕消息三",
+        "category": "medium",
+        "type": "image",
+        "priority": 77,
+        "enabled": true
+      },
+      {
+        "id": "neimuxiaoxisi",
+        "name": "内幕消息四",
+        "category": "medium",
+        "type": "image",
+        "priority": 78,
+        "enabled": true
+      },
+      {
+        "id": "dongfangshenhua",
+        "name": "东方神话",
+        "category": "low",
+        "type": "image",
+        "priority": 79,
+        "enabled": true
+      },
+      {
+        "id": "shutianxiansheng",
+        "name": "书天先生",
+        "category": "low",
+        "type": "image",
+        "priority": 80,
+        "enabled": true
+      },
+      {
+        "id": "jingyingbatu",
+        "name": "精英八图",
+        "category": "medium",
+        "type": "image",
+        "priority": 81,
+        "enabled": true
+      },
+      {
+        "id": "zhongteliang",
+        "name": "中特两组",
+        "category": "low",
+        "type": "numbers",
+        "priority": 82,
+        "enabled": true
+      },
+      {
+        "id": "putiantongle",
+        "name": "普天同乐",
+        "category": "low",
+        "type": "image",
+        "priority": 83,
+        "enabled": true
+      },
+      {
+        "id": "sizihaocai",
+        "name": "四字好彩",
+        "category": "low",
+        "type": "image",
+        "priority": 84,
+        "enabled": true
+      },
+      {
+        "id": "qijialingma",
+        "name": "齐家灵码",
+        "category": "low",
+        "type": "numbers",
+        "priority": 85,
+        "enabled": true
+      },
+      {
+        "id": "mengnvmianqian",
+        "name": "梦女面前",
+        "category": "low",
+        "type": "image",
+        "priority": 86,
+        "enabled": true
+      },
+      {
+        "id": "tianshixunbao",
+        "name": "天师巡报",
+        "category": "low",
+        "type": "image",
+        "priority": 87,
+        "enabled": true
+      },
+      {
+        "id": "qianlijinchuan",
+        "name": "千里锦传",
+        "category": "low",
+        "type": "image",
+        "priority": 88,
+        "enabled": true
+      },
+      {
+        "id": "liuhecaitu",
+        "name": "六合彩图",
+        "category": "medium",
+        "type": "image",
+        "priority": 89,
+        "enabled": true
+      },
+      {
+        "id": "tianjixiansheng",
+        "name": "天机先生",
+        "category": "low",
+        "type": "image",
+        "priority": 90,
+        "enabled": true
+      },
+      {
+        "id": "zhengtongziliao",
+        "name": "正统资料",
+        "category": "medium",
+        "type": "image",
+        "priority": 91,
+        "enabled": true
+      },
+      {
+        "id": "jingzhunerfentian",
+        "name": "精准二分天",
+        "category": "low",
+        "type": "numbers",
+        "priority": 92,
+        "enabled": true
+      },
+      {
+        "id": "jingzhunerfendi",
+        "name": "精准二分地",
+        "category": "low",
+        "type": "numbers",
+        "priority": 93,
+        "enabled": true
+      },
+      {
+        "id": "jingzhunerfenren",
+        "name": "精准二分人",
+        "category": "low",
+        "type": "numbers",
+        "priority": 94,
+        "enabled": true
+      },
+      {
+        "id": "xiushenyanglian",
+        "name": "修身养廉",
+        "category": "low",
+        "type": "image",
+        "priority": 95,
+        "enabled": true
+      },
+      {
+        "id": "tianshangshengma",
+        "name": "天上圣码",
+        "category": "low",
+        "type": "numbers",
+        "priority": 96,
+        "enabled": true
+      },
+      {
+        "id": "xiangshushengxiao",
+        "name": "相鼠生肖",
+        "category": "low",
+        "type": "numbers",
+        "priority": 97,
+        "enabled": true
+      },
+      {
+        "id": "zhongwaitese",
+        "name": "中外特色",
+        "category": "low",
+        "type": "image",
+        "priority": 98,
+        "enabled": true
+      },
+      {
+        "id": "jingxuanshengxiao",
+        "name": "精选生肖",
+        "category": "low",
+        "type": "numbers",
+        "priority": 99,
+        "enabled": true
+      },
+      {
+        "id": "huaguanguangcai",
+        "name": "花冠光彩",
+        "category": "low",
+        "type": "image",
+        "priority": 100,
+        "enabled": true
+      },
+      {
+        "id": "tedaliuhe",
+        "name": "特大六合",
+        "category": "medium",
+        "type": "image",
+        "priority": 101,
+        "enabled": true
+      },
+      {
+        "id": "zhengbantongxun",
+        "name": "正版通讯",
+        "category": "medium",
+        "type": "image",
+        "priority": 102,
+        "enabled": true
+      },
+      {
+        "id": "baisehuakai",
+        "name": "百色花开",
+        "category": "low",
+        "type": "image",
+        "priority": 103,
+        "enabled": true
+      },
+      {
+        "id": "jingshibaogao",
+        "name": "警世报告",
+        "category": "low",
+        "type": "image",
+        "priority": 104,
+        "enabled": true
+      },
+      {
+        "id": "shenghuotongji",
+        "name": "生活统计",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 105,
+        "enabled": true
+      },
+      {
+        "id": "shengxiaoshu",
+        "name": "生肖属",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 106,
+        "enabled": true
+      },
+      {
+        "id": "haomaziliao",
+        "name": "号码资料",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 107,
+        "enabled": true
+      },
+      {
+        "id": "zonghetongi",
+        "name": "综合统计",
+        "category": "analysis",
+        "type": "chart",
+        "priority": 108,
+        "enabled": true
+      }
+    ],
+    "hongkong": [
+      {
+        "id": "hk_paogoutu",
+        "name": "跑狗图",
+        "category": "hot",
+        "type": "image",
+        "priority": 1,
+        "source": {
+          "url": "https://49.gs.cn/xglhc/paogoutu/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "hk_guanjiap",
+        "name": "管家婆",
+        "category": "hot",
+        "type": "image",
+        "priority": 2,
+        "source": {
+          "url": "https://49.gs.cn/xglhc/guanjiap/"
+        },
+        "enabled": true
+      },
+      {
+        "id": "hk_lingboweibo",
+        "name": "凌波微步",
+        "category": "hot",
+        "type": "image",
+        "priority": 3,
+        "enabled": true
+      },
+      {
+        "id": "hk_jingzhun24ma",
+        "name": "精准24码",
+        "category": "hot",
+        "type": "mixed",
+        "priority": 4,
+        "enabled": true
+      },
+      {
+        "id": "hk_liuhekaima",
+        "name": "六合开马",
+        "category": "medium",
+        "type": "image",
+        "priority": 5,
+        "enabled": true
+      }
+    ],
+    "taiwan": [
+      {
+        "id": "tw_paogoutu",
+        "name": "台湾跑狗图",
+        "category": "hot",
+        "type": "image",
+        "priority": 1,
+        "reserved": true,
+        "manual": true,
+        "enabled": false,
+        "note": "预留位置"
+      },
+      {
+        "id": "tw_guanjiap",
+        "name": "台湾管家婆",
+        "category": "hot",
+        "type": "image",
+        "priority": 2,
+        "reserved": true,
+        "manual": true,
+        "enabled": false,
+        "note": "预留位置"
+      },
+      {
+        "id": "tw_lingboweibo",
+        "name": "台湾凌波微步",
+        "category": "hot",
+        "type": "image",
+        "priority": 3,
+        "reserved": true,
+        "manual": true,
+        "enabled": false,
+        "note": "预留位置"
+      },
+      {
+        "id": "tw_jingzhun24ma",
+        "name": "台湾精准24码",
+        "category": "hot",
+        "type": "mixed",
+        "priority": 4,
+        "reserved": true,
+        "manual": true,
+        "enabled": false,
+        "note": "预留位置"
+      }
+    ]
+  },
+  
+  "settings": {
+    "history": {
+      "keepYears": 1,
+      "keepPeriods": 150,
+      "startYear": 2026,
+      "description": "保留2026全年历史数据"
+    },
+    "crawler": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "timeout": 30000,
+      "retryAttempts": 3,
+      "retryDelay": 2000,
+      "concurrentRequests": 5,
+      "rateLimitPerMinute": 30,
+      "delayBetweenRequests": 2000
+    },
+    "imageProcessing": {
+      "maxWidth": 1200,
+      "quality": 85,
+      "format": "jpeg",
+      "optimize": true,
+      "targetSizeKB": 80
+    },
+    "storage": {
+      "provider": "cloudflare-r2",
+      "bucket": "lottery-materials",
+      "publicUrl": "${R2_PUBLIC_URL}",
+      "pathPrefix": "materials/",
+      "pathPattern": "{region}/{materialId}/{year}/{period}.jpg"
+    },
+    "database": {
+      "provider": "cloudflare-d1",
+      "name": "lottery-db",
+      "tables": {
+        "materials": "materials",
+        "periods": "lottery_periods",
+        "crawlLogs": "crawl_logs"
+      }
+    },
+    "schedule": {
+      "timezone": "Asia/Shanghai",
+      "updateTimes": [
+        {
+          "name": "after_draw",
+          "description": "开奖后自动检查",
+          "trigger": "event",
+          "regions": ["macao", "hongkong"]
+        },
+        {
+          "name": "morning",
+          "time": "03:00",
+          "description": "凌晨3点检查",
+          "trigger": "cron",
+          "cron": "0 19 * * *",
+          "regions": ["macao", "hongkong"]
+        },
+        {
+          "name": "afternoon",
+          "time": "15:00",
+          "description": "下午3点检查",
+          "trigger": "cron",
+          "cron": "0 7 * * *",
+          "regions": ["macao", "hongkong"]
+        }
+      ],
+      "drawSchedule": {
+        "macao": {
+          "frequency": "daily",
+          "time": "21:30",
+          "description": "澳门每天开奖"
+        },
+        "hongkong": {
+          "frequency": "every_2_days",
+          "days": [2, 4, 6],
+          "time": "21:30",
+          "description": "香港每周二四六开奖"
+        }
+      }
+    },
+    "notification": {
+      "enabled": true,
+      "onSuccess": false,
+      "onFailure": true,
+      "email": "${NOTIFICATION_EMAIL}"
+    }
+  }
+}
