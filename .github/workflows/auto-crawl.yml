@@ -1,0 +1,67 @@
+name: Auto Crawl Materials
+
+on:
+  schedule:
+    # 凌晨3点（UTC+8 = UTC-5，即UTC 19:00）
+    - cron: '0 19 * * *'
+    # 下午3点（UTC+8 = UTC-5，即UTC 7:00）
+    - cron: '0 7 * * *'
+    # 开奖后时间段（晚上10点，UTC 14:00）
+    - cron: '0 14 * * *'
+  
+  workflow_dispatch:  # 允许手动触发
+    inputs:
+      lottery_type:
+        description: 'Lottery type (macao/hongkong/both)'
+        required: false
+        default: 'both'
+      force_update:
+        description: 'Force update all materials'
+        required: false
+        default: 'false'
+
+jobs:
+  crawl-and-upload:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run crawler
+        env:
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+        run: |
+          node scripts/crawler/unified-crawler.js
+      
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npm i -g vercel
+          vercel --prod --token=$VERCEL_TOKEN --yes
+      
+      - name: Send notification
+        if: success()
+        run: echo "✅ Materials updated successfully at $(date)"
+      
+      - name: Report failure
+        if: failure()
+        run: echo "❌ Crawl failed at $(date)"
