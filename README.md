@@ -1,38 +1,84 @@
-# 🎰 Lottery Materials Crawler
+# 🎰 六合彩开奖数据 API
 
-香港六合彩和澳门六合彩素材自动爬取系统
+自动采集香港六合彩和澳门六合彩的开奖数据，通过 GitHub Actions 自动更新。
 
-## 📋 功能
+## 📡 API 地址
 
-- 🇭🇰 香港六合彩历史数据爬取
-- 🇲🇴 澳门六合彩历史数据爬取
-- ⏰ 自动定时爬取（每天UTC 15:00）
-- 📊 数据自动提交到仓库
-- 🔔 失败通知
+```
+https://parker6263333-pixel.github.io/lottery-materials/data/lottery-data.json
+```
 
-## 🚀 使用方法
+## 🚀 特性
 
-### 手动触发
+- ✅ **自动采集** - GitHub Actions 每小时自动运行
+- ✅ **实时更新** - 开奖后自动同步最新数据
+- ✅ **完全免费** - 无需注册，直接调用
+- ✅ **CDN 加速** - GitHub Pages 全球加速
 
-在 GitHub Actions 页面，选择对应的 workflow，点击 "Run workflow"
+## 📊 数据格式
 
-### 自动运行
+```json
+{
+  "version": "1.0.0",
+  "lastUpdate": "2026-09-04T12:00:00Z",
+  "description": "香港六合彩和澳门六合彩开奖数据",
+  "source": "自动爬虫采集",
+  "hongkong": [
+    {
+      "period": "234",
+      "date": "2026-09-04",
+      "numbers": [21, 46, 6, 42, 36, 44],
+      "special": 15,
+      "region": "hongkong"
+    }
+  ],
+  "macao": [
+    {
+      "period": "245",
+      "date": "2026-09-04",
+      "numbers": [12, 23, 34, 45, 8, 19],
+      "special": 27,
+      "region": "macao"
+    }
+  ]
+}
+```
 
-系统每天会自动运行：
-- 香港六合彩：UTC 15:00（北京时间 23:00）
-- 澳门六合彩：UTC 15:00（北京时间 23:00）
+## 🔧 使用示例
 
-## 📁 数据存储
+### JavaScript
 
-数据存储在 `data/` 目录：
-- `data/hongkong/` - 香港六合彩数据
-- `data/macao/` - 澳门六合彩数据
+```javascript
+fetch('https://parker6263333-pixel.github.io/lottery-materials/data/lottery-data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log('香港最新开奖:', data.hongkong[0]);
+    console.log('澳门最新开奖:', data.macao[0]);
+  });
+```
 
-## ⚙️ 配置
+### Python
 
-在仓库的 Settings → Secrets 中配置：
-- `GITHUB_TOKEN` - 自动提供，无需配置
+```python
+import requests
 
-## 📝 日志
+url = 'https://parker6263333-pixel.github.io/lottery-materials/data/lottery-data.json'
+response = requests.get(url)
+data = response.json()
 
-所有运行日志保存在 GitHub Actions 的运行记录中
+print('香港最新开奖:', data['hongkong'][0])
+print('澳门最新开奖:', data['macao'][0])
+```
+
+## ⏰ 更新频率
+
+- 每小时自动检查更新
+- 开奖后立即更新（通过 webhook 触发）
+
+## 📝 许可证
+
+MIT License
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
