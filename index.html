@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>港澳六合彩资料中心</title>
+    <title>六合彩开奖数据 API</title>
     <style>
         * {
             margin: 0;
@@ -12,19 +12,16 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
             color: #F8FAFC;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 2rem;
         }
         
         .container {
             max-width: 1200px;
-            width: 100%;
+            margin: 0 auto;
         }
         
         header {
@@ -33,14 +30,13 @@
             padding: 2rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
-            border: 1px solid rgba(248, 250, 252, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         h1 {
             font-size: 2.5rem;
-            font-weight: 700;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #38BDF8, #22D3EE);
+            background: linear-gradient(135deg, #38BDF8 0%, #22D3EE 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -50,96 +46,86 @@
             font-size: 1.1rem;
         }
         
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(34, 211, 238, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            border: 1px solid rgba(34, 211, 238, 0.3);
-        }
-        
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #22D3EE;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .api-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
             margin-bottom: 2rem;
         }
         
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(248, 250, 252, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(56, 189, 248, 0.3);
-            box-shadow: 0 8px 32px rgba(56, 189, 248, 0.1);
-        }
-        
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
+        .api-card h2 {
             color: #38BDF8;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
-        .card-content {
-            color: #CBD5E1;
-            line-height: 1.6;
-        }
-        
-        .api-list {
-            list-style: none;
-        }
-        
-        .api-item {
-            background: rgba(15, 23, 42, 0.5);
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
+        .endpoint {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
             border-radius: 8px;
             border-left: 3px solid #F97316;
+            margin: 1rem 0;
             font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-        }
-        
-        .api-item:hover {
-            background: rgba(15, 23, 42, 0.8);
-        }
-        
-        .api-link {
-            color: #22D3EE;
-            text-decoration: none;
             word-break: break-all;
         }
         
-        .api-link:hover {
-            text-decoration: underline;
+        .endpoint code {
+            color: #22D3EE;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(34, 211, 238, 0.2);
+            color: #22D3EE;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .update-time {
+            color: #94A3B8;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-title {
+            color: #38BDF8;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-desc {
+            color: #94A3B8;
+            font-size: 0.9rem;
         }
         
         footer {
             text-align: center;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(248, 250, 252, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #64748B;
         }
     </style>
@@ -147,87 +133,89 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎰 港澳六合彩资料中心</h1>
-            <p class="subtitle">自动化采集 · 实时更新 · API 接口</p>
-            <div class="status">
-                <span class="status-dot"></span>
-                <span>系统运行中</span>
-            </div>
+            <h1>🎰 六合彩开奖数据 API</h1>
+            <p class="subtitle">自动采集 · 实时更新 · 免费使用</p>
         </header>
         
-        <div class="grid">
-            <div class="card">
-                <h2 class="card-title">📊 数据 API</h2>
-                <div class="card-content">
-                    <p>通过以下 API 接口获取最新开奖数据：</p>
-                    <ul class="api-list">
-                        <li class="api-item">
-                            <a href="./data/lottery-data.json" class="api-link" target="_blank">
-                                ./data/lottery-data.json
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="api-card">
+            <h2>📡 API 端点</h2>
+            <div class="endpoint">
+                <strong>数据接口：</strong><br>
+                <code>https://parker6263333-pixel.github.io/lottery-materials/data/lottery-data.json</code>
             </div>
-            
-            <div class="card">
-                <h2 class="card-title">🤖 自动化系统</h2>
-                <div class="card-content">
-                    <p>系统特性：</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0;">✅ 每日定时自动爬取</li>
-                        <li style="padding: 0.5rem 0;">✅ GitHub Actions 驱动</li>
-                        <li style="padding: 0.5rem 0;">✅ 数据实时同步</li>
-                        <li style="padding: 0.5rem 0;">✅ 支持手动触发</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="card">
-                <h2 class="card-title">🔗 相关链接</h2>
-                <div class="card-content">
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0;">
-                            <a href="https://github.com/parker6263333-pixel/lottery-materials" 
-                               class="api-link" target="_blank">
-                                📦 GitHub 仓库
-                            </a>
-                        </li>
-                        <li style="padding: 0.5rem 0;">
-                            <a href="https://github.com/parker6263333-pixel/lottery-materials/actions" 
-                               class="api-link" target="_blank">
-                                🤖 Actions 运行状态
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="status">✅ 服务运行中</div>
+            <p class="update-time">⏰ 每小时自动更新 | 最后更新: <span id="lastUpdate">加载中...</span></p>
+        </div>
+        
+        <div class="api-card">
+            <h2>📊 数据格式</h2>
+            <div class="endpoint">
+<pre>{
+  "version": "1.0.0",
+  "lastUpdate": "2026-09-04T12:00:00Z",
+  "hongkong": [
+    {
+      "period": "234",
+      "date": "2026-09-04",
+      "numbers": [21, 46, 6, 42, 36, 44],
+      "special": 15
+    }
+  ],
+  "macao": [
+    {
+      "period": "245",
+      "date": "2026-09-04",
+      "numbers": [12, 23, 34, 45, 8, 19],
+      "special": 27
+    }
+  ]
+}</pre>
             </div>
         </div>
         
-        <div class="card">
-            <h2 class="card-title">📅 更新时间表</h2>
-            <div class="card-content">
-                <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                    <li style="padding: 0.75rem; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
-                        <strong style="color: #F97316;">22:00</strong> 
-                        <span style="color: #94A3B8;">港澳每日爬取</span>
-                    </li>
-                    <li style="padding: 0.75rem; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
-                        <strong style="color: #F97316;">23:00</strong> 
-                        <span style="color: #94A3B8;">每日自动更新</span>
-                    </li>
-                    <li style="padding: 0.75rem; background: rgba(15, 23, 42, 0.5); border-radius: 8px;">
-                        <strong style="color: #F97316;">多时段</strong> 
-                        <span style="color: #94A3B8;">自动同步</span>
-                    </li>
-                </ul>
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-title">自动采集</div>
+                <div class="feature-desc">GitHub Actions 每小时自动运行</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">快速响应</div>
+                <div class="feature-desc">CDN 加速，全球访问快速</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🆓</div>
+                <div class="feature-title">完全免费</div>
+                <div class="feature-desc">无需注册，直接调用</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">实时更新</div>
+                <div class="feature-desc">开奖后自动同步数据</div>
             </div>
         </div>
         
         <footer>
-            <p>🚀 Powered by GitHub Actions & GitHub Pages</p>
-            <p style="margin-top: 0.5rem;">自动化爬虫系统 | 数据仅供参考</p>
+            <p>💻 Powered by GitHub Pages & GitHub Actions</p>
+            <p style="margin-top: 0.5rem;">🔗 <a href="https://github.com/parker6263333-pixel/lottery-materials" style="color: #38BDF8; text-decoration: none;">查看源代码</a></p>
         </footer>
     </div>
+    
+    <script>
+        // 加载最后更新时间
+        fetch('./data/lottery-data.json')
+            .then(res => res.json())
+            .then(data => {
+                const updateElem = document.getElementById('lastUpdate');
+                if (data.lastUpdate) {
+                    const date = new Date(data.lastUpdate);
+                    updateElem.textContent = date.toLocaleString('zh-CN');
+                }
+            })
+            .catch(err => {
+                console.error('加载数据失败:', err);
+            });
+    </script>
 </body>
 </html>
