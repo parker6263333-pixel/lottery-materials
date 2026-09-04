@@ -1,20 +1,19 @@
 {
   "name": "lottery-materials",
   "version": "1.0.0",
-  "description": "香港六合彩和澳门六合彩素材爬虫系统",
-  "main": "index.js",
+  "description": "六合彩开奖数据自动采集系统",
+  "main": "scraper.js",
   "scripts": {
-    "crawl:hongkong": "node crawlers/hongkong/main.js",
-    "crawl:macao": "node crawlers/macao/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scrape": "node scraper.js",
+    "test": "node scraper.js"
   },
   "keywords": [
     "lottery",
-    "crawler",
+    "scraper",
     "hongkong",
     "macao"
   ],
-  "author": "",
+  "author": "parker6263333-pixel",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.0",
