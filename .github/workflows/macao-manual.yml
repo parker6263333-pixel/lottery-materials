@@ -1,0 +1,31 @@
+name: 澳门六合彩手动触发
+
+on:
+  workflow_dispatch:
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run crawler
+        run: npm run crawl:macao
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Manual update Macao lottery data"
+          git push

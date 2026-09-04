@@ -1,0 +1,74 @@
+name: 自动部署到GitHub Pages
+
+# 触发条件：推送到main分支时自动运行
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # 允许手动触发
+
+# 设置GitHub Pages权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # 部署任务
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 检出代码
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+      
+      # 2. 设置Node.js环境（如果需要构建）
+      - name: 🔧 设置Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      # 3. 安装依赖（如果有package.json）
+      - name: 📦 安装依赖
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          else
+            echo "无需安装依赖"
+          fi
+      
+      # 4. 检查JSON文件格式
+      - name: ✅ 检查JSON格式
+        run: |
+          echo "检查JSON文件..."
+          for file in data/**/*.json; do
+            if [ -f "$file" ]; then
+              echo "检查: $file"
+              node -e "JSON.parse(require('fs').readFileSync('$file'))" || exit 1
+            fi
+          done
+          echo "✅ 所有JSON文件格式正确"
+      
+      # 5. 配置GitHub Pages
+      - name: 🔧 配置Pages
+        uses: actions/configure-pages@v4
+      
+      # 6. 上传构建产物
+      - name: 📤 上传到Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      
+      # 7. 部署到GitHub Pages
+      - name: 🚀 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      # 8. 发送通知（可选）
+      - name: 📢 部署成功通知
+        if: success()
+        run: |
+          echo "✅ 部署成功！"
+          echo "🌐 网站地址: ${{ steps.deployment.outputs.page_url }}"
+          echo "📅 部署时间: $(date '+%Y-%m-%d %H:%M:%S')"
+          echo "📝 提交信息: ${{ github.event.head_commit.message }}"
