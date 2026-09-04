@@ -1,0 +1,62 @@
+{
+  "version": "2.0.0",
+  "description": "Materials Configuration - 100+ Types",
+  "lastUpdate": "2026-09-03",
+  "types": {
+    "yunchu-guanren": {
+      "code": "yunchu-guanren",
+      "name": "云储官人",
+      "icon": "👨‍💼",
+      "color": "#4A90E2",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "云储官人精选资料",
+      "priority": 1,
+      "isHot": true
+    },
+    "zhenban-shepaitu": {
+      "code": "zhenban-shepaitu",
+      "name": "正版射牌图",
+      "icon": "🎯",
+      "color": "#E74C3C",
+      "dataType": "image",
+      "category": "macao",
+      "description": "正版射牌图彩色图纸",
+      "priority": 2,
+      "isHot": true
+    },
+    "fuqi-qinzhun": {
+      "code": "fuqi-qinzhun",
+      "name": "福气秦准",
+      "icon": "💰",
+      "color": "#F39C12",
+      "dataType": "mixed",
+      "category": "macao",
+      "description": "福气秦准精准推荐",
+      "priority": 3,
+      "isHot": true
+    },
+    "aomen-zhengliao": {
+      "code": "aomen-zhengliao",
+      "name": "澳门正料",
+      "icon": "⭐",
+      "color": "#9B59B6",
+      "dataType": "data",
+      "category": "macao",
+      "description": "澳门正料精准数据",
+      "priority": 4,
+      "isHot": true
+    },
+    "hongkong-tese": {
+      "code": "hongkong-tese",
+      "name": "香港特色",
+      "icon": "🎲",
+      "color": "#1ABC9C",
+      "dataType": "mixed",
+      "category": "hongkong",
+      "description": "香港特色资料",
+      "priority": 5,
+      "isHot": false
+    }
+  }
+}
