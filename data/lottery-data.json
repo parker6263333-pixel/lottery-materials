@@ -1,8 +1,290 @@
 {
   "version": "1.0.0",
-  "lastUpdate": "2026-09-04",
+  "lastUpdate": "2026-09-04T04:01:56.977Z",
   "description": "香港六合彩和澳门六合彩开奖数据",
   "source": "自动爬虫采集",
-  "hongkong": [],
-  "macao": []
+  "hongkong": [
+    {
+      "period": "234",
+      "date": "2026-09-04",
+      "numbers": [
+        1,
+        6,
+        12,
+        20,
+        22,
+        37
+      ],
+      "special": 3,
+      "region": "hongkong"
+    },
+    {
+      "period": "233",
+      "date": "2026-09-03",
+      "numbers": [
+        5,
+        10,
+        12,
+        21,
+        29,
+        49
+      ],
+      "special": 6,
+      "region": "hongkong"
+    },
+    {
+      "period": "232",
+      "date": "2026-09-02",
+      "numbers": [
+        2,
+        12,
+        14,
+        16,
+        47,
+        49
+      ],
+      "special": 19,
+      "region": "hongkong"
+    },
+    {
+      "period": "231",
+      "date": "2026-09-01",
+      "numbers": [
+        9,
+        21,
+        27,
+        30,
+        32,
+        46
+      ],
+      "special": 6,
+      "region": "hongkong"
+    },
+    {
+      "period": "230",
+      "date": "2026-08-31",
+      "numbers": [
+        10,
+        16,
+        28,
+        39,
+        45,
+        46
+      ],
+      "special": 14,
+      "region": "hongkong"
+    },
+    {
+      "period": "229",
+      "date": "2026-08-30",
+      "numbers": [
+        5,
+        19,
+        23,
+        32,
+        38,
+        46
+      ],
+      "special": 25,
+      "region": "hongkong"
+    },
+    {
+      "period": "228",
+      "date": "2026-08-29",
+      "numbers": [
+        1,
+        5,
+        21,
+        29,
+        30,
+        45
+      ],
+      "special": 22,
+      "region": "hongkong"
+    },
+    {
+      "period": "227",
+      "date": "2026-08-28",
+      "numbers": [
+        2,
+        11,
+        21,
+        31,
+        40,
+        48
+      ],
+      "special": 24,
+      "region": "hongkong"
+    },
+    {
+      "period": "226",
+      "date": "2026-08-27",
+      "numbers": [
+        22,
+        24,
+        25,
+        35,
+        36,
+        46
+      ],
+      "special": 21,
+      "region": "hongkong"
+    },
+    {
+      "period": "225",
+      "date": "2026-08-26",
+      "numbers": [
+        10,
+        15,
+        19,
+        22,
+        34,
+        49
+      ],
+      "special": 22,
+      "region": "hongkong"
+    }
+  ],
+  "macao": [
+    {
+      "period": "245",
+      "date": "2026-09-04",
+      "numbers": [
+        20,
+        22,
+        23,
+        25,
+        28,
+        43
+      ],
+      "special": 47,
+      "region": "macao"
+    },
+    {
+      "period": "244",
+      "date": "2026-09-03",
+      "numbers": [
+        10,
+        14,
+        17,
+        40,
+        41,
+        44
+      ],
+      "special": 48,
+      "region": "macao"
+    },
+    {
+      "period": "243",
+      "date": "2026-09-02",
+      "numbers": [
+        3,
+        5,
+        22,
+        25,
+        36,
+        45
+      ],
+      "special": 15,
+      "region": "macao"
+    },
+    {
+      "period": "242",
+      "date": "2026-09-01",
+      "numbers": [
+        25,
+        39,
+        40,
+        42,
+        47,
+        48
+      ],
+      "special": 6,
+      "region": "macao"
+    },
+    {
+      "period": "241",
+      "date": "2026-08-31",
+      "numbers": [
+        5,
+        12,
+        22,
+        27,
+        46,
+        49
+      ],
+      "special": 6,
+      "region": "macao"
+    },
+    {
+      "period": "240",
+      "date": "2026-08-30",
+      "numbers": [
+        3,
+        18,
+        26,
+        32,
+        42,
+        48
+      ],
+      "special": 3,
+      "region": "macao"
+    },
+    {
+      "period": "239",
+      "date": "2026-08-29",
+      "numbers": [
+        2,
+        7,
+        22,
+        28,
+        33,
+        36
+      ],
+      "special": 27,
+      "region": "macao"
+    },
+    {
+      "period": "238",
+      "date": "2026-08-28",
+      "numbers": [
+        9,
+        16,
+        25,
+        43,
+        44,
+        48
+      ],
+      "special": 42,
+      "region": "macao"
+    },
+    {
+      "period": "237",
+      "date": "2026-08-27",
+      "numbers": [
+        11,
+        14,
+        23,
+        30,
+        38,
+        43
+      ],
+      "special": 49,
+      "region": "macao"
+    },
+    {
+      "period": "236",
+      "date": "2026-08-26",
+      "numbers": [
+        4,
+        14,
+        15,
+        20,
+        36,
+        44
+      ],
+      "special": 6,
+      "region": "macao"
+    }
+  ]
 }
